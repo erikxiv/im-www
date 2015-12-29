@@ -1,23 +1,24 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  strategy: git
+  api_key:
+    secure: UKe7jk8Kh/6FdWM8+oYObz77QrPHMNLzczBL8fce/Vyd25twY5ooWgQQFtqGFYXxLg2UNPsjy0hpmlJ45Lgtm0m6W/iD9mcZc/57ZY7OI3irKqOKuAWJVz1w5zPDIzz9i7TfRNXqQNXqICX0v1THJz5/Prz+lAypBXwd7AZP4r3cW6B/iybtTtQqegqWkiinqI+R3hCs1kRwBTSAWYHU6zjibA1n3/jX60FJ5/g1hcCHSPQvAzcAtP/LclaXFhuHzhApEh9JC/s64r5TrCd92QAx8DK3jCDJ+ga/IbQjODr4N8jq3ds1wa5kSa0/BDJ8LP07DWxZKbNtXrojV/I5Cti4UrcDbhGXS0l3rP1GkB0yhcI/RZDbieHcu76cM/zomZKec5YV0XbMX1a/UEKPsqdbym/m3lC+I0OZWZdGMuHlS7vNIWzhKFdHYn9w8RdwR9f0o9bGtZ84Pznj0tPjT99VcY1kQZKGFFbPctG4l3TN3iFMy087FdLcsJr0FMuS7kSIQ26AMNuZly8KS6oxUaLsNNhc/+5ItgeFxHKPjGEacrl5PBXCzyR4YZVEiUqXsi5WBMIdnyJNS2MWc8UtJf4Xnsf0j2at+Nx9Cb7k0MqXxuoER1OP7CBceZ+34/MKrjD8QrnhWZc3eVJs2X7RmHbg+IcMUEBhZCWmSmFd9Xw=
+  app:
+    master: im-www
