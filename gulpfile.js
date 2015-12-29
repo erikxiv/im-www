@@ -112,7 +112,7 @@ gulp.task('tar', function () {
 /// Watch for changes
 //////
 gulp.task('watch', ['docker-up'], function() {
-  watch(['**/*', '**/.*', '!tmp/**', '!.git/**'], function(file) {
+  watch(['**/*', '**/.*', '!./tmp/**', '!./.git/**'], function(file) {
     gutil.log('watch: ' + file.event + ' ' + file.relative);
     if (file.event === 'unlink') {
       child_process.exec('docker exec '+mainContainerName+' rm -rf ' + mainDockerPath + '/' + file.relative, { stdio: 'inherit' }, log_errors);

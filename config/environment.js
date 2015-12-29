@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'myapp',
+    modulePrefix: 'informationmeet',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
