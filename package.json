@@ -42,8 +42,5 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "yamljs": "^0.2.4"
-  },
-  "dependencies": {
-    "bower": "^1.5.3"
   }
 }
