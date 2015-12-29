@@ -1,7 +1,7 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
-  "description": "Small description for myapp goes here",
+  "name": "www.informationmeet.com",
+  "version": "1.0.0",
+  "description": "Information Meet main site",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Erik Larsson",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
