@@ -7,4 +7,4 @@ ember:
    - .:/tmp/myapp
   entrypoint:
    - sh
-  command: -c "tar -xmf /tmp/myapp/tmp/init.tar && ember server"
+  command: -c "tar -xmf /tmp/myapp/tmp/init.tar && bower install && ember server"

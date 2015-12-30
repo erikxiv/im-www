@@ -31,16 +31,12 @@ gulp.task('up', ['docker-up', 'watch'], function () {
 
 //////
 // Execute an ember task in the container
-// Usage: gulp run --cmd "help generate"
+// Usage: gulp bash
 //////
-gulp.task('run', ['dockerMachine-up'], function () {
-  if (gutil.env.cmd) {
-    var args = 'run --rm -t -v ' + pwd + ':' + mainDockerPath + ' ' + mainDockerImage + ' ' + gutil.env.cmd;
-    gutil.log('cmd: docker ' + args);
-    child_process.spawn('docker', args.split(' '), { stdio: 'inherit' });
-  }
-  else
-    gutil.log(gutil.colors.red('Usage: gulp run --cmd "some command to run"'));
+gulp.task('bash', ['dockerMachine-up'], function () {
+  var args = 'run --rm -it --entrypoint=sh -v ' + pwd + ':' + mainDockerPath + ' ' + mainDockerImage + ' -c bash';
+  gutil.log('cmd: docker ' + args);
+  child_process.spawn('docker', args.split(' '), { stdio: 'inherit' });
 });
 
 //////
