@@ -99,7 +99,7 @@ gulp.task('dockerMachine-up', function() {
 // Pack current directory (for swift copy to docker container)
 /////
 gulp.task('tar', function () {
-  return gulp.src(['**/*', '**/.*', '!tmp/**'])
+  return gulp.src(['**/*', '**/.*', '!tmp/**', '!./.git/**'])
       .pipe(tar('init.tar'))
       .pipe(gulp.dest('tmp'));
 });
