@@ -12,6 +12,9 @@
     "jquery": "^2.1.0",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
-    "materialize": "~0.97.0"
+    "materialize": "~0.97.0",
+    "ember-simple-auth": "0.8.0",
+    "auth0-lock": "~7.7.1",
+    "jsrsasign": "~4.8.3"
   }
 }

@@ -2,9 +2,9 @@ ember:
   image: danlynn/ember-cli:1.13.8
   ports:
    - "80:4200"
-   - "35729:35729"
+   - "49152:49152"
   volumes:
    - .:/tmp/myapp
   entrypoint:
    - sh
-  command: -c "tar -xmf /tmp/myapp/tmp/init.tar && bower install --allow-root && ember server"
+  command: -c "tar -xmf /tmp/myapp/tmp/init.tar && npm install && bower install --allow-root && ember server"

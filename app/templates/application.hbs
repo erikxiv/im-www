@@ -5,7 +5,18 @@
           Information Meet
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a class="waves-effect waves-light"><i class="material-icons left">account_circle</i>Sign in</a></li>
+          <li>
+            {{#if session.isAuthenticated}}
+              <a class="waves-effect waves-light" {{ action 'invalidateSession' }}>
+                <img src="{{session.secure.profile.picture}}" class="circle responsive-img left" style="height: 3rem"/>
+              </a>
+            {{else}}
+              <a class="waves-effect waves-light" {{ action 'authenticateSession' }}>
+                <i class="material-icons left">account_circle</i>
+                Sign in
+              </a>
+            {{/if}}
+          </li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
