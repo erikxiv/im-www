@@ -3,12 +3,11 @@ ok 2 PhantomJS 1.9 - JSHint - helpers: helpers/resolver.js should pass jshint
 ok 3 PhantomJS 1.9 - JSHint - helpers: helpers/start-app.js should pass jshint
 ok 4 PhantomJS 1.9 - JSHint - .: router.js should pass jshint
 ok 5 PhantomJS 1.9 - JSHint - routes: routes/application.js should pass jshint
-ok 6 PhantomJS 1.9 - JSHint - routes: routes/index2.js should pass jshint
-ok 7 PhantomJS 1.9 - JSHint - .: test-helper.js should pass jshint
+ok 6 PhantomJS 1.9 - JSHint - .: test-helper.js should pass jshint
 
-1..7
-# tests 7
-# pass  7
+1..6
+# tests 6
+# pass  6
 # fail  0
 
 # ok
